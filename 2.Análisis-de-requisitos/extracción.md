@@ -1,12 +1,11 @@
+## Extracción de requisitos
 
-##Extracción de requisitos
-
-###Partes interesadas:
+### Partes interesadas:
 
     Parte uno
     Parte dos
 
-###Datos que gestiona el sistema:
+### Datos que gestiona el sistema:
 
     Usuarios
         Nombre
@@ -17,7 +16,7 @@
         Tipo (gato, perro)
         Dueño
 
-###Requisitos funcionales (ordenados por prioridad)
+### Requisitos funcionales (ordenados por prioridad)
 
     Añadir nuevo usuario
     Añadir nueva mascota
@@ -28,7 +27,7 @@
     Mostrar todas las mascotas de un usuario
     Mostrar todas las mascotas de un tipo concreto
 
-###Requisitos no funcionales
+### Requisitos no funcionales
 
     Sistema operativo Linux
     Interfaz CLI
