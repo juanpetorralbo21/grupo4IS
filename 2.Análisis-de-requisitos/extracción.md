@@ -1,21 +1,52 @@
 ## Extracción de requisitos
 
 #### Partes interesadas:
-* Parte uno
-* Parte dos
+* Principal:  Secretario
+* Secundaria: 
 
 #### Datos que gestiona el sistema:
-* Usuarios
+* Clientes
   * Nombre
   * Apellidos
+  * Fecha nacimiento
   * Teléfono
-* Mascota (máx. 5 por usuario)
-  * Nombre (máx. 20 caracteres)
-  * Tipo (gato, perro)
-  * Dueño
+  * Tipo de seguro
+* Historial médico (máx. 1 por usuario)
+  * Detalles ocurrido
+  * Fecha
+  * Hora
+* Tratamiento 
+  * Dosis
+  * Regularidad
+  * Fecha inicio
+  * Fecha finalización
+* Cita
+  * Fecha
+  * Hora
+  * Motivo
+  * Paciente
 
 #### Requisitos funcionales (ordenados por prioridad)
-1. Añadir nuevo usuario
+1. Listar pacientes
+   Insertar nuevo paciente
+2. Modificar datos paciente
+3. Buscar paciente por apellidos y nombre
+4. Eliminar paciente
+5. 
+ . Listar citas del día
+ . Listar citas de la semana
+6. Insertar nueva cita
+ . Buscar cita por apellido del paciente
+ . Buscar todas las citas del paciente
+7. Modificar cita
+8. Cancelar cita
+ . 
+ . Mostrar historial paciente
+ . Insertar nuevo historial de paciente
+ . Modificar historial paciente
+ . Eliminar historial paciente
+   
+
 1. Añadir nueva mascota
 1. Mostrar una lista de los usuarios
 1. Buscar usuario por nombre y apellidos
