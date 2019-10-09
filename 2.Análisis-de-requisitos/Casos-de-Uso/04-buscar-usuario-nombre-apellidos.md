@@ -1,6 +1,6 @@
 ## Buscar usuario por nombre y apellidos
 
-**ID**: 03
+**ID**: 04
 **Descripción**: Se introduce el nombre y apellidos del usuario que se busca y el sistema lo muestra.
 
 **Actores principales**: Administrador
@@ -21,6 +21,6 @@
 
 **Flujos alternativos**:
 
-3.a. Si los datos introducidos no son correctos, no se modificará
+4.a. Si no existe el usuario, se muestra un mensaje de error
 
 
