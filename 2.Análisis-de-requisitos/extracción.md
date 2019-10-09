@@ -28,25 +28,23 @@
 
 #### Requisitos funcionales (ordenados por prioridad)
 1. Listar pacientes
-   Insertar nuevo paciente
-2. Modificar datos paciente
-3. Buscar paciente por apellidos y nombre
-4. Eliminar paciente
-5. 
- . Listar citas del día
- . Listar citas de la semana
-6. Insertar nueva cita
- . Buscar cita por apellido del paciente
- . Buscar todas las citas del paciente
-7. Modificar cita
-8. Cancelar cita
- . 
- . Mostrar historial paciente
- . Insertar nuevo historial de paciente
- . Modificar historial paciente
- . Eliminar historial paciente
+2. Insertar nuevo paciente
+3. Modificar datos paciente
+4. Buscar paciente por apellidos y nombre
+5. Eliminar paciente
+6. Listar citas del día
+7. Listar citas de la semana
+8. Insertar nueva cita
+9. Buscar cita por apellido del paciente
+10. Buscar todas las citas del paciente
+11. Modificar cita
+12. Cancelar cita
+13. Mostrar historial paciente
+14. Insertar nuevo historial de paciente
+15. Modificar historial paciente
+16. Eliminar historial paciente
    
-
+> *Ejemplo del profesor:*
 1. Añadir nueva mascota
 1. Mostrar una lista de los usuarios
 1. Buscar usuario por nombre y apellidos
