@@ -1,18 +1,17 @@
 ## Listar o mostrar pacientes
 
 **ID**: 01
-**Descripción**: Muestra por pantalla la lista de todos los pacientes de la clinica
+**Descripción**: Muestra por pantalla la lista de todos los pacientes de la clínica
 
-**Actores principales**: Administrador
-**Actores secundarios**: Usuario
+**Actores principales**: Secretario
 
 **Precondiciones**:
 * Ninguna
 
 **Flujo principal**:
-1. El administrador desea ver los usuarios
-1. El administrador abre el cuadro de diálogo de mostrar lista en el menú principal
-1. El sistema muestra por pantalla todos los usuarios ordenados por nombre
+1. El administrador selecciona mostrar listado pacientes
+2. El sistema muestra selecciona todos los pacientes almacenados en el fichero de pacientes
+3. El sistema muestra los pacientes por pantalla por orden alfabético respecto al apellido
 
 **Postcondiciones**:
 
@@ -20,4 +19,4 @@
 
 **Flujos alternativos**:
 
-* Ninguno
+1.a Si no hay pacientes registrados, se muestra un mensaje de que no hay ningún paciente registrado todavía
