@@ -1,4 +1,4 @@
-## Buscar usuario por nombre y apellidos
+## Buscar paciente por nombre y apellidos
 
 **ID**: 04
 **Descripción**: Se introduce el nombre y apellidos del usuario que se busca y el sistema lo muestra.
