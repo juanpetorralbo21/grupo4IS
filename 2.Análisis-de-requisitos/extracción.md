@@ -24,6 +24,7 @@
   * Fecha
   * Hora
   * Motivo
+  * Paciente
   * Numero de contacto
 
 #### Requisitos funcionales (ordenados por prioridad)
@@ -36,7 +37,7 @@
 7. Listar citas de la semana
 8. Insertar nueva cita
 9. Buscar cita por apellido del paciente
-10. Buscar todas las citas del paciente
+10. 
 11. Modificar cita
 12. Cancelar cita
 13. Mostrar historial paciente
