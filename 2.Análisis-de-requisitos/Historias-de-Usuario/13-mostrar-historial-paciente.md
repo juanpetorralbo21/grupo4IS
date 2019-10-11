@@ -7,10 +7,7 @@ Quiero mostrar el historial del paciente seleccionado
 ---
 
 * Se deberán mostrar la siguiente información:
-  * Fecha
-  * Hora
-  * Motivo
-  * Paciente
-  * Telefono
+  * Detalles ocurrido
+  * Fecha de modificación
 
 ---
