@@ -1,4 +1,4 @@
-### **ID:** 13 **Mostrar el historial del paciente**
+### **ID:** 11 **Mostrar el historial del paciente**
 
 Quiero mostrar el historial del paciente seleccionado
 
