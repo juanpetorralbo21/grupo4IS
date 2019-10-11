@@ -1,6 +1,6 @@
 ## Mostrar pacientes
 
-**ID**: 13
+**ID**: 11
 **Descripción**: Muestra por pantalla la lista de todos los historiales de los pacientes de la clínica
 
 **Actores principales**: Secretario
