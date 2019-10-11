@@ -1,4 +1,4 @@
-### **ID:** 17 **Insertar nuevo tratamiento**
+### **ID:** 15 **Insertar nuevo tratamiento**
 
 El secretario quiere añadir un nuevo tratamiento a un paciente
 
