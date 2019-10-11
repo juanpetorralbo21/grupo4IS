@@ -1,0 +1,18 @@
+### **ID:** 02 **Insertar Paciente**
+
+Quiero poder añadir al sistema un nuevo paciente
+
+**Prioridad:** 1
+
+---
+
+* Quiero poder introducir todos los datos de un nuevo paciente:
+  * DNI
+  * Nombre
+  * Apellidos
+  * Teléfono
+  * Dirección
+  * Fecha de nacimiento
+  * Tipo de seguro
+
+---
