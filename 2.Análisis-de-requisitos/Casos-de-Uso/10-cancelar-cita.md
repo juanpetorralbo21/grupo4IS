@@ -1,6 +1,6 @@
 ## Eliminar paciente
 
-**ID**: 12
+**ID**: 10
 **Descripción**: Se elimina una cita seleccionada
 
 **Actores principales**: Secretario
