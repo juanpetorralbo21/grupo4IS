@@ -1,6 +1,6 @@
 ## Finalizar tratamiento del paciente
 
-**ID**: 19
+**ID**: 17
 **Descripción**: Se termina el tratamiento del paciente
 
 **Actores principales**: Secretario
