@@ -1,4 +1,4 @@
-### **ID:** 12 **Cancelar Cita**
+### **ID:** 10 **Cancelar Cita**
 
 Quiero eliminar una cita ya registrada
 
