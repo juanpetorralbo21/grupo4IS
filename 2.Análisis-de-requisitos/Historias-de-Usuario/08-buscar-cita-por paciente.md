@@ -1,4 +1,4 @@
-### **ID:** 09 **Buscar cita por paciente**
+### **ID:** 08 **Buscar cita por paciente**
 
 Se debe buscar todas las citas de un determinado paciente 
 
