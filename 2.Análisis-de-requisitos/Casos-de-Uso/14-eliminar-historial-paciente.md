@@ -1,6 +1,6 @@
 ## Eliminar historial del paciente
 
-**ID**: 16
+**ID**: 14
 **Descripción**: Se elimina el historial del paciente
 
 **Actores principales**: Secretario
