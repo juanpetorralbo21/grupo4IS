@@ -1,6 +1,6 @@
 ## Insertar nuevo historial de paciente
 
-**ID**: 14
+**ID**: 12
 **Descripción**: Se inserta un nuevo historial del paciente en el sistema
 
 **Actores principales**: Secretario
