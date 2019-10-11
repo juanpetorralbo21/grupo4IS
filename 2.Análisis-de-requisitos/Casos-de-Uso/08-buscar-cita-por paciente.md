@@ -1,6 +1,6 @@
 ## Buscar cita por paciente
 
-**ID**: 09
+**ID**: 08
 **Descripción**: El sistema busca dentro del fichero todas las citas que estan asignadas al paciente introducido
 
 **Actores principales**: Secretario
