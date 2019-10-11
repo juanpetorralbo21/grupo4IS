@@ -2,15 +2,11 @@
 
 Quiero eliminar una cita ya registrada
 
-**Prioridad:** 2
+**Prioridad:** 3
 
 ---
 
-* Se deberán eliminar los siguientes datos a cada cita:
-  * Fecha
-  * Hora
-  * Motivo
-  * Paciente
-  * Telefono
+* Realizar borrado de la cita seleccionado y todos sus datos.
 
 ---
+
