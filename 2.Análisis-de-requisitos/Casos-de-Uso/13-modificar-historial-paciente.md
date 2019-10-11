@@ -1,6 +1,6 @@
 ## Modificar historial del paciente
 
-**ID**: 15
+**ID**: 13
 **Descripción**: Primero se deberá buscar el historial del paciente y una vez encontrado, se debe indicar el dato que desea modificar.
 
 **Actores principales**: Secretario
