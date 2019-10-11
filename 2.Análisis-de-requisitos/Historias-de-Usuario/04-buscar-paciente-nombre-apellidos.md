@@ -8,6 +8,6 @@ Quiero poder buscar un paciente registrado en la base de datos.
 
 * Quiero poder realizar la búsqueda por nombre y apellidos.
 
-* Quiero poder realizar distintas opciones con el alumno buscado.
+* Quiero poder realizar distintas opciones con el paciente buscado.
 
 ---
