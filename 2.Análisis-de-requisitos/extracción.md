@@ -2,7 +2,7 @@
 
 #### Partes interesadas:
 * Principal:  Secretario
-* Secundaria: 
+* Secundaria: Desarrolladores
 
 #### Datos que gestiona el sistema:
 * Clientes
@@ -12,7 +12,7 @@
   * Dirección
   * Teléfono
   * Tipo de seguro
-* Historial médico (máx. 1 por usuario)
+* Historial médico
   * Detalles ocurrido
   * Fecha de modificación
 * Tratamiento 
@@ -38,13 +38,13 @@
 8. Buscar cita por apellido del paciente
 9. Modificar cita
 10. Cancelar cita
-11. Mostrar historial paciente
+11. Mostrar o consultar historial paciente
 12. Insertar nuevo historial de paciente
-13. Modificar historial paciente
-14. Eliminar historial paciente
-15. Introducir nuevo tratamiento paciente
-16. Modificar tratamiento paciente
-17. Finalizar tratamiento
+13. Eliminar historial paciente
+14. Introducir nuevo tratamiento paciente
+15. Modificar tratamiento paciente
+16. Finalizar tratamiento
+17. Mostrar tratamiento de paciente
 
 #### Requisitos no funcionales
 * Sistema operativo Linux
@@ -52,3 +52,5 @@
 * Lenguaje de implementación: C++
 * Máximo 10 GiB de almacenamiento
 * Gestión mínima de 200 pacientes
+* No se puede modificar el historial pasado de un paciente
+* No se puede modificar el tratamiento pasado de un paciente
