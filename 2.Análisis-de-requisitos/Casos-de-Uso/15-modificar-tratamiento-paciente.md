@@ -1,6 +1,6 @@
 ## Modificar tratamiento del paciente
 
-**ID**: 16
+**ID**: 15
 **Descripción**: Primero se deberá buscar el tratamiento del paciente y una vez encontrado, se debe indicar el dato que desea modificar.
 
 **Actores principales**: Secretario
