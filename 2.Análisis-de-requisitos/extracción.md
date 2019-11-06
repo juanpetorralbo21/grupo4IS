@@ -38,13 +38,12 @@
 8. Buscar cita por apellido del paciente
 9. Modificar cita
 10. Cancelar cita
-11. Mostrar o consultar historial paciente
+11. Consultar historial paciente
 12. Insertar nuevo historial de paciente
-13. Eliminar historial paciente
+13. Consultar tratamientos paciente
 14. Introducir nuevo tratamiento paciente
 15. Modificar tratamiento paciente
 16. Finalizar tratamiento
-17. Mostrar tratamiento de paciente
 
 #### Requisitos no funcionales
 * Sistema operativo Linux
