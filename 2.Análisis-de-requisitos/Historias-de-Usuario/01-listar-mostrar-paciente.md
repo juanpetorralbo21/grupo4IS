@@ -1,15 +1,14 @@
-### **ID**: 01 **Mostrar Paciente**
-
-Como secretario quiero poder mostrar pacientes  
+### **ID**: 01 Nombre: **Mostrar Paciente**
 
 **Prioridad**: 4
 
 ---
+**Descripción**
 
-* Quiero poder mostrar:
+Como secretario quiero poder mostrar todos los datos del paciente para consultar su información
+
+**Validacion**
   * Un único paciente.
-  * Todos los pacientes de la clínica.
-
-* Quiero poder mostrar todos los datos del paciente mostrado.
-
+  * Se deben mostrar todos los datos del usuario
+  
 ---
