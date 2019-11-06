@@ -13,7 +13,7 @@
 1. El secretario selecciona insertar un nuevo historial de usuario
 2. El sistema muestra un formulario con los campos de necesarios
 3. El secretario rellena el formulario con la información del historial del paciente
-4. El sistema almacena el nuevo historial del paciente dentro del fichero
+4. El sistema almacena la nueva entrada del historial del paciente dentro del fichero
 5. El sistema muestra un mensaje de éxito
 
 **Postcondiciones**:
@@ -22,4 +22,3 @@
 
 **Flujos alternativos**:
 
-1.a. Si ya existe el historial del paciente, se muestra un mensaje de error
