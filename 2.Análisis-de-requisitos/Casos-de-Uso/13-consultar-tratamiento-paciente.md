@@ -1,7 +1,7 @@
-## Modificar historial del paciente
+## Consultar tratamientos paciente
 
 **ID**: 13
-**Descripción**: Primero se deberá buscar el historial del paciente y una vez encontrado, se debe indicar el dato que desea modificar.
+**Descripción**: Consulta cuáles son los tratamientos asignados al paciente
 
 **Actores principales**: Secretario
 **Actores secundarios**: Usuario
