@@ -4,23 +4,23 @@
 **Descripción**: Se elimina paciente
 
 **Actores principales**: Secretario
-**Actores secundarios**: Usuario
 
 **Precondiciones**:
 * Ninguna
 
 **Flujo principal**:
 1. El secretario desea eliminar a un paciente de la lista
-1. El secretario
-1. El secretario introduce el nombre y apellidos del usuario
-1. El sistema muestra por pantalla los datos del usuario
+2. El secretario introduce el nombre y apellidos del usuario a eliminar 
+3. El sistema busca dentro del fichero de pacientes
+4. El sistema elimina al paciente del fichero
 
 **Postcondiciones**:
 
-* 
+* Ninguna
 
 **Flujos alternativos**:
 
-4.a. Si no existe el paciente, se muestra un mensaje de error
+3.a. Si no se encuentra el paciente, se muestra un mensaje de error
+
 
 
