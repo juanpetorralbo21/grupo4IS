@@ -1,6 +1,6 @@
 ## Insertar nuevo tratamiento de paciente
 
-**ID**: 15
+**ID**: 14
 **Descripción**: Se inserta un nuevo tratamiento del paciente en el sistema
 
 **Actores principales**: Secretario
