@@ -1,11 +1,17 @@
-### **ID**: 03 **Modificar Paciente**
-
-Como secretario quiero poder modificar un paciente que ya está en la base de datos.  
+### **ID**: 03 Nombre: **Modificar Paciente**
 
 **Prioridad:** 4
 
 ---
+**Descripción**
 
-* Quiero poder modificar todos los datos de un paciente.
+Como secretario quiero poder modificar un paciente para modificar sus datos.  
+
+**Validación**
+
+* Se almacene la nueva información sobre el paciente.
+* No se elimine ninguna información del paciente por la modificación.
+* No modificar información de otro paciente por error.
+* El paciente ha modificar se encuentre en el sistema.
 
 ---
