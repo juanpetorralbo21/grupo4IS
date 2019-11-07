@@ -1,17 +1,17 @@
 
-### **ID:** 09 **Modificar cita**
+### **ID:** 09 Nombre: **Modificar cita**
 
-Quiero modificar una cita ya almacenada
-
-**Prioridad:** 2
+**Prioridad:** 3
 
 ---
+**Descripción**
 
-* Se deberán poder modificar los siguientes datos a cada cita:
-  * Fecha
-  * Hora
-  * Motivo
-  * Paciente
-  * Telefono
+Como secretario quiero modificar una cita para modificar para cambiar cualquier dato dentro de ella.
 
+
+**Validación**
+
+* Se deberán poder modificar cualquier dato
+* Debe de encontrase ya almacenada con anterioridad.
+* Debe almacenarse la nueva infomación.
 ---
