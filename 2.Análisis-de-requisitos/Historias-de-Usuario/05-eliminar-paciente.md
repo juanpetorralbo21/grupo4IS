@@ -1,11 +1,14 @@
 ### **ID:** 05 **Eliminar Paciente**
 
-Quiero poder eliminar un paciente registrado en la base de datos.
-
-**Prioridad:** 4
+**Prioridad:** 2
 
 ---
+**Descripción**
+Como secretario quiero eliminar un paciente registrado para que no aparezca en el sistema.
 
-* Realizar borrado de un paciente seleccionado y todos sus datos.
+**Validacion**
 
+* No se encuentre en el listado de pacientes una vez eliminado.
+* No eliminar otro paciente por error.
+* Se encuentre registrado anteriormente.
 ---
