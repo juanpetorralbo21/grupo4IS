@@ -7,7 +7,8 @@
 
 Como secretario quiero poder buscar pacientes según su nombre para conocer sus datos y poder realizar otra operacion sobre el.
 
-**Validacion**
+
+**Validación**
 
 * Busque correctamente el paciente gracias a la infomración introducida.
 * Nos muestra la información integra del paciente
