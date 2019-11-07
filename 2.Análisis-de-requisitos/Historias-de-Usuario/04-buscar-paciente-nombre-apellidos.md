@@ -1,13 +1,15 @@
-### **ID:** 04 **Buscar Pacientes**
+### **ID:** 04 Nombre: **Buscar Pacientes por nombre y apellidos**
 
-Quiero poder buscar un paciente registrado en la base de datos.
-
-**Prioridad:** 3
+**Prioridad:** 2
 
 ---
+**Descripción**
 
-* Quiero poder realizar la búsqueda por nombre y apellidos.
+Como secretario quiero poder buscar pacientes según su nombre para conocer sus datos y poder realizar otra operacion sobre el.
 
-* Quiero poder realizar distintas opciones con el paciente buscado.
+**Validacion**
+
+* Busque correctamente el paciente gracias a la infomración introducida.
+* Nos muestra la información integra del paciente
 
 ---
