@@ -1,15 +1,16 @@
-### **ID**: 06 **Listar citas**
+### **ID**: 06  Nombre:**Listar citas**
 
-Como secretario quiero ver la lista de las citas del dia  
-
-**Prioridad**: 4
+**Prioridad**: 2
 
 ---
 
-* Quiero poder ver:
-  * Citas del dia ordenadas
-  * Datos del paciente de una cita
+**Descripción**
 
-* Quiero poder mostrar todos los datos del paciente que tenga la cita
+Como secretario quiero ver la lista de las citas del dia seleccionado para saber que pacientes deben de asistir a la consulta.
 
+
+**Validacion**
+
+* Mostrar todas las citas de forma ordenada.
+* Mostrar el nombre del paciente correctamente
 ---
