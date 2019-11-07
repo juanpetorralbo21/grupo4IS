@@ -6,13 +6,13 @@ Quiero poder añadir al sistema un nuevo paciente
 
 ---
 
-* Quiero poder introducir todos los datos de un nuevo paciente:
-  * DNI
-  * Nombre
-  * Apellidos
-  * Teléfono
-  * Dirección
-  * Fecha de nacimiento
-  * Tipo de seguro
+**Descripción**
+
+Como secretario quiero insertar un nuevo paciente para que se quede registrado en el sistema
+
+**Validación**
+ * Se debe de insertar solo un único paciente
+ * No puede insertarse un paciente ya existente
+ * Debe haber integridad en los datos insertados
 
 ---
