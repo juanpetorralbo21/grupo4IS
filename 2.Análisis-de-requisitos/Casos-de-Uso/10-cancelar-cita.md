@@ -1,7 +1,7 @@
-## Eliminar paciente
+## Cancelar cita
 
 **ID**: 10
-**Descripción**: Se elimina una cita seleccionada
+**Descripción**: Se cancela una cita seleccionada
 
 **Actores principales**: Secretario
 
