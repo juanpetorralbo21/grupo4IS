@@ -1,8 +1,8 @@
-##DIAGRAMA DE CLASES
+# DIAGRAMA DE CLASES
 
 #Clase: Paciente
 Contiene los parámetros y métodos que han de guardarse en el fichero o base de datos.
-*Datos:
+* Datos:
 - Nombre tipo string
 - Apellidos tipo string
 - Teléfono tipo int
@@ -12,7 +12,7 @@ Aparte la clase paciente contendrá los observadores y modificadores de los atri
 
 #Clase: Cita
 Esta clase tiene contenido de la clase paciente y aparte está contenida en nuestro sistema.
-*Datos:
+* Datos:
 - Fecha tipo string
 - Hora de tipo string
 - Motivo de tipo string
@@ -22,14 +22,14 @@ También contiene los observadores y modificadores de los atributos anteriores
 
 #Subclase: Historial Médico
 La clase historial contendrá el historial del paciente, unos detalles de lo ocurrido y la fecha de modificacion
-*Datos:
+* Datos:
 - Detalles ocurrido tipo string
 - Fecha de modificacion de tipo string
 Contiene los observadores y el modificador de la fecha de moficiación
 
 #Subclase: Tratamiento
 Contiene la información de interés del tratamiento de un paciente
-*Datos:
+* Datos:
 - Dosis de tipo string
 - Regularidad de tipo string
 - Fecha de inicio de tipo string
