@@ -1,4 +1,4 @@
-### **ID:** 14 **Eliminar Historial del paciente**
+### **ID:** 14 **Introducir tratamiento del paciente**
 
 Quiero poder eliminar el historial de un paciente
 
