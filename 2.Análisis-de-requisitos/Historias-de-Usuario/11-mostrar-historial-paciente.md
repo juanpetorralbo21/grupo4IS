@@ -1,13 +1,16 @@
-### **ID:** 11 **Mostrar el historial del paciente**
+### **ID:** 11 Nombre: **Mostrar el historial del paciente**
 
-Quiero mostrar el historial del paciente seleccionado
-
-**Prioridad:** 1
+**Prioridad:** 2
 
 ---
 
-* Se deberán mostrar la siguiente información:
-  * Detalles ocurrido
-  * Fecha de modificación
+**Descripción**
+
+Como secretario quiero acceder al historial del usuario para ver las entradas almacendas anteriormente.
+
+**Validación**
+
+* Deben mostrarse por orden cronológico
+* Tienen que mostrarse todas, sin excepción.
 
 ---
