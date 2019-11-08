@@ -1,13 +1,14 @@
-### **ID:** 13 **Consultar tratamientos del paciente**
-
-Quiero insertar un nuevo registro dentro del historial del paciente
+### **ID:** 13 Nombre: **Consultar tratamientos del paciente**
 
 **Prioridad:** 2
 
 ---
+**Descripción**
 
-* Se deberán poder modifciar la siguiente información:
-  * Detalles ocurrido
-  * Fecha de modificación
+Como secretario quiero consultar cuales son los tratamientos que tiene asignados el paciente para comunicarselos.
 
+**Validación**
+* El paciente puede que no tenga ningún tratamiento
+* Los tratamientos deben de corresponderse con el paciente.
+* El paciente debe de encontrarse registrado.
 ---
