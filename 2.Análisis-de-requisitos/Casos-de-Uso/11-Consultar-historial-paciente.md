@@ -1,4 +1,4 @@
-## Mostrar pacientes
+## Consultar Historial del paciente
 
 **ID**: 11
 **Descripción**: Muestra por pantalla el historial médico del paciente
