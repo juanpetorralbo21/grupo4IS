@@ -1,4 +1,4 @@
-### **ID:** 17 **Finalizar Tratamiento**
+### **ID:** 16 **Finalizar Tratamiento**
 
 Quiero finalizar el tratamiento y que deje de aparecerme en el apartado "Tratamiento"
 
