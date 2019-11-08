@@ -1,11 +1,15 @@
-### **ID**: 15 **Modificar tratamiento paciente**
-
-Como secretario quiero poder modificar el tratamiento de un paciente.  
+### **ID**: 15 Nombre: **Modificar tratamiento paciente**
 
 **Prioridad:** 4
 
 ---
+**Descripción**
 
-* Quiero poder modificar los datos del tratamiento de un paciente.
+Como secretario quiero poder modificar el tratamiento de un paciente
+
+**Validación**
+
+* El paciente debe de tener ya el tratamiento asignado.
+* No modificar el tratamiento para los demás pacientes.
 
 ---
