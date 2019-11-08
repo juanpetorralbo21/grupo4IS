@@ -1,11 +1,15 @@
-### **ID:** 14 **Introducir tratamiento del paciente**
+### **ID:** 14 Nombre: **Introducir tratamiento del paciente**
 
-Quiero poder eliminar el historial de un paciente
-
-**Prioridad:** 4
+**Prioridad:** 3
 
 ---
+**Descripción**
 
-* Realizar borrado del historial de un paciente seleccionado y todos sus datos.
+Como secretario quiero asignar un nuevo tratamiento al paciente para que sepa que tiene que tomar.
 
+**Validación**
+
+* El paciente debe de estar registrado.
+* Se debe asignar un tratamiento que se encuentre registrado.
+* Las dosis y el tiempo no deben de ser erróneas.
 ---
