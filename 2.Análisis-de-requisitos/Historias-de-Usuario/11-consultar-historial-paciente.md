@@ -1,4 +1,4 @@
-### **ID:** 11 Nombre: **Mostrar el historial del paciente**
+### **ID:** 11 Nombre: **Consultar historial del paciente**
 
 **Prioridad:** 2
 
