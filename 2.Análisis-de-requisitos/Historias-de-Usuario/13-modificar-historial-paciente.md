@@ -1,4 +1,4 @@
-### **ID:** 13 **Modificar el registro del historial del paciente**
+### **ID:** 13 **Consultar tratamientos del paciente**
 
 Quiero insertar un nuevo registro dentro del historial del paciente
 
