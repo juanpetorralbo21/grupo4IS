@@ -1,12 +1,15 @@
-### **ID:** 16 **Finalizar Tratamiento**
+### **ID:** 16  Nombre: **Finalizar Tratamiento**
 
-Quiero finalizar el tratamiento y que deje de aparecerme en el apartado "Tratamiento"
-
-**Prioridad:** 4
+**Prioridad:** 3
 
 ---
+**Descripción**
 
-* Finaliza el tratamiento del paciente registrado
-* Se elimina el "Tratamiento" del paciente en cuestion.
+Como secretario quiero finalizar el tratamiento de un paciente para que deje de tenerlo asignado.
 
+**Validación**
+
+* El paciente tiene que tener el tratamiento asignado.
+* No se debe de finalizar tratamientos de otros pacientes.
+* El tratamiento tiene que haber terminado la fecha.
 ---
