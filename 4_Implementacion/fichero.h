@@ -22,7 +22,7 @@
 
 		public:
 
-			Fichero(string nPacientes, string nCitas, string nTratamientos);
+			Fichero(string nPacientes="pacientes.txt", string nCitas="citas.txt", string nTratamientos="tratamientos.txt");
 
 			//Modificadores
 			inline void setNFPacientes(string nPacientes) {nombre_fichero_Pacientes_=nPacientes;}
@@ -35,6 +35,8 @@
 			inline string getNFTratamientos() {return nombre_fichero_Tratamientos_;}
 
 			//Funciones
+			bool insertarPaciente(Paciente nPaciente);
+			bool buscarPacienteNombreCompleto(string nombre, string apellidos);
 	};
 
 #endif
