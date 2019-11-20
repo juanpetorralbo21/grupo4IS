@@ -25,6 +25,7 @@ bool Fichero::insertarPaciente(Paciente paciente)
 	return false;
 }
 
+//Funcion que busca a un paciente dentro del fichero por su nombre y apellidos
 bool Fichero::buscarPacienteNombreCompleto(string nombre, string apellidos)
 {
 	string linea;
@@ -47,3 +48,36 @@ bool Fichero::buscarPacienteNombreCompleto(string nombre, string apellidos)
   	fich.close();
 	return false;
 }
+
+//Funcion que elimina un paciente del fichero
+bool Fichero::eliminarPaciente(string nombre, string apellidos)
+{
+	string linea;
+	Paciente aux;
+
+	//Se comprueba que el paciente se encuentra en los ficheros
+	if(!buscarPacienteNombreCompleto(nombre, apellidos))
+		return false;
+
+	ifstream fich(getNFPacientes());
+	ofstream auxF("aux.txt");
+
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+
+		//Copiar todo el contenido que no sea del usuario
+		if(!(aux.getNombre() == nombre && aux.getApellidos() == apellidos))
+			auxF << linea;		
+	}
+
+	fich.close();
+	auxF.close();
+	remove(getNFPacientes().c_str());
+
+	rename("aux.txt", getNFPacientes().c_str());
+	return true;
+}
+
+

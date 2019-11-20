@@ -37,6 +37,7 @@
 			//Funciones
 			bool insertarPaciente(Paciente nPaciente);
 			bool buscarPacienteNombreCompleto(string nombre, string apellidos);
+			bool eliminarPaciente(string nombre, string apellidos);
 	};
 
 #endif
