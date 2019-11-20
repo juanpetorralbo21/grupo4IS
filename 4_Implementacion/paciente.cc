@@ -61,3 +61,14 @@ void Paciente::setLineaFichero(string linea)
 	//Para tipo de seguro
 	setSeguro(sub);
 }
+
+void Paciente::mostrarPaciente()
+{
+	cout << "DATOS PACIENTE"
+	cout << "-----------------------"
+	cout << "Nombre: " << getApellidosyNombre();
+	cout << "Fecha nacimiento: " << getFechaNacimiento();
+	cout << "Direccion: " << getDireccion();
+	cout << "Telefono: " << getTelefono();
+	cout << "Tipo de seguro: " << getTipoSeguro();
+}

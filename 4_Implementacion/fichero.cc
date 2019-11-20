@@ -75,9 +75,42 @@ bool Fichero::eliminarPaciente(string nombre, string apellidos)
 	fich.close();
 	auxF.close();
 	remove(getNFPacientes().c_str());
-
 	rename("aux.txt", getNFPacientes().c_str());
 	return true;
+}
+
+bool Fichero::modificarPaciente(Paciente nuevo_paciente)
+{
+	//Se comprueba que el paciente se encuentra en los ficheros
+	if(!buscarPacienteNombreCompleto(nuevo_paciente.getNombre(), nuevo_paciente.getApellidos()))
+		return false;
+
+	//Eliminamos el antiguo paciente
+	if(!eliminarPaciente(nuevo_paciente.getNombre(), nuevo_paciente.getApellidos()))
+		return false;
+
+	//Insertamos el paciente con los nuevos datos
+	if(!insertarPaciente(nuevo_paciente))
+		return false;
+
+	return true;
+}
+
+list<Paciente> Fichero::listarPacientes()
+{
+	list<Paciente> lPac; //Lista de pacientes
+	ifstream fich(getNFPacientes());
+	string linea;
+	Paciente aux;
+
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+		lPac.push_back(aux);
+	}
+
+	return lPac;
 }
 
 

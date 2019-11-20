@@ -12,6 +12,8 @@
 	using std::ofstream;
 	#include <iostream>
 
+	using namespace std;
+
 	class Fichero {
 
 		private:
@@ -38,6 +40,8 @@
 			bool insertarPaciente(Paciente nPaciente);
 			bool buscarPacienteNombreCompleto(string nombre, string apellidos);
 			bool eliminarPaciente(string nombre, string apellidos);
+			bool modificarPaciente(Paciente nuevo_paciente);
+			list<Paciente> listarPacientes();
 	};
 
 #endif

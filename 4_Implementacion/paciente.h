@@ -42,6 +42,8 @@
 		//Devuelve la linea con todos los datos para almacenarlos en el fichero
 		inline string getLineaFichero() const {return getNombre()+","+getApellidos()+","+getFechaNacimiento()+","+getDireccion()+","+std::to_string(getTelefono())+","+getTipoSeguro();} 
   		void setLineaFichero(string linea); //el inverso del anterior
+  		void mostrarPaciente();
+
   };
 
 #endif
