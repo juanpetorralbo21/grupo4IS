@@ -1,8 +1,9 @@
 //Archivo que contiene las funciones de la clase Fichero
 //La clase Fichero se encarga de abrir, introducir, eliminar y buscar todos los datos de las demás clases
-//Antonio Marín Rodríguez
+//Antonio Marín Rodríguez y Juan Pedro Torralbo Mejías
 #include "fichero.h"
 #include "paciente.h"
+#include "cita.h"
 
 Fichero::Fichero(string nPacientes, string nCitas, string nTratamientos)
 {
@@ -10,6 +11,8 @@ Fichero::Fichero(string nPacientes, string nCitas, string nTratamientos)
 	setNFCitas(nCitas);
 	setNFTratamientos(nTratamientos);
 }
+
+//FUNCIONES DE LA CLASE PACIENTE
 
 bool Fichero::insertarPaciente(Paciente paciente)
 {	
@@ -112,5 +115,74 @@ list<Paciente> Fichero::listarPacientes()
 
 	return lPac;
 }
+
+//FUNCIONES DE LA CLASE CITAS
+
+bool Fichero::insertarCita(Cita cita)
+{
+	//Si la cita no se encuentra en el fichero
+	if(!buscarCitaNombre(cita.getNombre(), cita.getApellidos()))
+	{
+		ofstream fich("./"+getNFCitas());
+		fich << cita.getLineaFichero();
+		fich.close();
+		return true;
+	}
+
+	return false;
+}
+
+bool Fichero::buscarCitaNombre(string nombre, string apellidos)
+{
+	string linea;
+	Cita aux;
+	ifstream fich("./"+getNFCitas());
+
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+
+		//Ha encontrado al paciente
+		if(aux.getNombre() == nombre && aux.getApellidos() == apellidos)
+		{
+			fich.close();
+			return true;
+		}
+	}
+
+  	fich.close();
+	return false;
+}
+
+
+bool Fichero::cancelarCita(string nombre, string apellidos)
+{
+	string linea;
+	Cita aux;
+	if(!buscarPacienteNombreCompleto(nombre,apellidos))
+		return false;
+
+	ifstream fich(getNFCitas());
+	ofstream auxF("aux.txt");
+
+}
+
+list<Cita> Fichero::listarCitas()
+{
+	list<Cita> lCit;
+	ifstream fich(getNFCitas());
+	string linea;
+	Cita aux;
+
+	while (!fich.eof())
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+		lCit.push_back(aux);
+	}
+	return lCit;
+}
+
 
 
