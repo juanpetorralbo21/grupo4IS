@@ -46,7 +46,6 @@
 		inline string getLineaFichero() const {return getNombre()+","+getApellidos()+","+getFecha()+","+getHora()+","+std::to_string(getTelefono())+","+getMotivo();} 
   		void setLineaFichero(string linea); //el inverso del anterior
   		void mostrarCita();
-
   };
 
 #endif

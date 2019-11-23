@@ -185,4 +185,28 @@ list<Cita> Fichero::listarCitas()
 }
 
 
+void Fichero::insertarNuevaEntradaHistorial(string nombre, string apellidos, Historial historial)
+{
+	ofstream fich("./Historiales/"+apellidos+"-"+nombre);
+	fich << historial.getLineaFichero();
+	fich.close();
+}
+
+
+list<Historial> Fichero::listarHistorial(string nombre, string apellidos)
+{
+	list<Historial> lHist; //Lista de entradas al historial
+	ifstream fich("./Historiales/"+apellidos+"-"+nombre);
+	string linea;
+	Historial aux;
+
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+		lHist.push_back(aux);
+	}
+
+	return lHist;
+}	
 

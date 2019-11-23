@@ -6,6 +6,7 @@
 
 	#include <string>
 	using std::string;
+	using namespace std;
 
   class Historial{
 
@@ -15,7 +16,7 @@
 
 	public:
 		//Constructor
-		Paciente(string nombre="", string apellidos="", string fechanacimiento="", string direccion="", int telefono=111111111, string tipo_seguro="");
+		Historial(string detalles="", string fecha="");
 
 		//Modificadores
 		inline void setDetalles(string detalles){detalles_=detalles;};

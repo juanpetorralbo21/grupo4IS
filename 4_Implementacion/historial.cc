@@ -1,5 +1,13 @@
 //Archivo de funciones de la clase Historial
 //Antonio Marín Rodríguez
+#include "historial.h"
+
+//Constructor
+Historial::Historial(string detalles, string fecha)
+{
+ 	setDetalles(detalles);
+ 	setFecha(fecha);
+}
 
 void Historial::setLineaFichero(string linea)
 {

@@ -7,6 +7,7 @@
 	
 	#include "paciente.h"
 	#include "cita.h"
+	#include "historial.h"
 	#include <list>
 	#include <fstream>
 	using std::ifstream;
@@ -49,7 +50,10 @@
 			bool buscarCitaNombre(string nombre, string apellidos);
 			bool cancelarCita(string nombre, string apellidos);
 			list<Cita> listarCitas();
-			
+
+			//Funciones clase historial
+			void insertarNuevaEntradaHistorial(string nombre, string apellidos, Historial historial);
+			list<Historial> listarHistorial(string nombre, string apellidos);			
 	};
 
 #endif
