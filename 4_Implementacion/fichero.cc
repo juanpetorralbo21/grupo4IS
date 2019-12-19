@@ -165,9 +165,9 @@ bool Fichero::cancelarCita(string nombre, string apellidos)
 
 	ifstream fich(getNFCitas());
 	ofstream auxF("aux.txt");
-
 }
 
+//Funcion que lista las citas del fichero
 list<Cita> Fichero::listarCitas()
 {
 	list<Cita> lCit;
@@ -181,6 +181,8 @@ list<Cita> Fichero::listarCitas()
 		aux.setLineaFichero(linea);
 		lCit.push_back(aux);
 	}
+
+	fich.close();
 	return lCit;
 }
 
@@ -207,6 +209,75 @@ list<Historial> Fichero::listarHistorial(string nombre, string apellidos)
 		lHist.push_back(aux);
 	}
 
+	fich.close();
 	return lHist;
 }	
 
+void insertarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
+{
+	ofstream fich("./Tratamiento/"+apellidos+"-"+nombre);
+	fich << Tratamiento.getLineaFichero();
+	fich.close();
+}
+
+
+void modificarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamientos)
+{
+
+}
+
+bool Tratamiento::finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
+{
+	string linea;
+	Tratamiento aux;
+	bool flag=false;
+
+	ifstream fich("./Tratamientos/"+apellidos+"-"+nombre);
+	ofstream auxF("aux.txt");
+
+	//Metemos todo el contenido de los tratamientos menos el finalizado
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+
+		//Copiar todo el contenido que no sea del usuario
+		if(!(aux.getNomTratamiento() == tratamiento.getNomTratamiento()))
+		{
+			flag=true;
+			auxF << linea;		
+		}
+	}
+
+	fich.close();
+	auxF.close();
+	remove(getNFPacientes().c_str());
+	rename("aux.txt", getNFPacientes().c_str());
+
+	if(flag)
+	{
+		Historial hist("Tratamiento " + getNomTratamiento() + "finalizado.","");
+		insertarNuevaEntradaHistorial(nombre, apellidos, hist);
+	}
+	return true;
+}
+
+//Funcion que lista los tratamientos del paciente
+list<Tratamiento> Fichero::listarTratamientosPaciente(string nombre, string apellidos)
+{
+	list<Tratamiento> lTrat; //Lista de tratamientos
+
+	ifstream fich("./Tratamientos/"+apellidos+"-"+nombre);
+	string linea;
+	Tratamiento aux;
+
+	while (!fich.eof()) 
+	{
+		fich >> linea;
+		aux.setLineaFichero(linea);
+		lHist.push_back(aux);
+	}
+
+	fich.close();
+	return lTrat;
+}

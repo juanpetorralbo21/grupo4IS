@@ -8,6 +8,7 @@
 	#include "paciente.h"
 	#include "cita.h"
 	#include "historial.h"
+	#include "tratamiento.h"
 	#include <list>
 	#include <fstream>
 	using std::ifstream;
@@ -53,7 +54,13 @@
 
 			//Funciones clase historial
 			void insertarNuevaEntradaHistorial(string nombre, string apellidos, Historial historial);
-			list<Historial> listarHistorial(string nombre, string apellidos);			
+			list<Historial> listarHistorial(string nombre, string apellidos);
+
+			//Funciones clase Tratamiento
+			void insertarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
+			void finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
+			bool Tratamiento::finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
+			list<Tratamiento> listarTratamientosPaciente(string nombre, string apellidos);			
 	};
 
 #endif

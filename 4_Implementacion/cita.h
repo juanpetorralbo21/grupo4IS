@@ -37,7 +37,7 @@
 		string getApellidosyNombre() const {return getApellidos() + " " + getNombre();};
 		inline string getFecha() const {return fecha_;};
 		inline string getHora() const {return hora_;};
-			inline string getMotivo() const {return motivo_;}
+		inline string getMotivo() const {return motivo_;}
 		inline int getTelefono() const {return telefono_;};
 	
 
