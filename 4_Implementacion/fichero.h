@@ -11,11 +11,12 @@
 	#include "tratamiento.h"
 	#include <list>
 	#include <fstream>
+	#include <string.h>
+	using std::string;
 	using std::ifstream;
 	using std::ofstream;
 	#include <iostream>
 
-	using namespace std;
 
 	class Fichero {
 
@@ -58,8 +59,7 @@
 
 			//Funciones clase Tratamiento
 			void insertarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
-			void finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
-			bool Tratamiento::finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
+			bool finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento);
 			list<Tratamiento> listarTratamientosPaciente(string nombre, string apellidos);			
 	};
 

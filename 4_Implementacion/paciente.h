@@ -43,7 +43,6 @@
 		inline string getLineaFichero() const {return getNombre()+","+getApellidos()+","+getFechaNacimiento()+","+getDireccion()+","+std::to_string(getTelefono())+","+getTipoSeguro();} 
   		void setLineaFichero(string linea); //el inverso del anterior
   		void mostrarPaciente();
-
   };
 
 #endif

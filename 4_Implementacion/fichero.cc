@@ -216,7 +216,7 @@ list<Historial> Fichero::listarHistorial(string nombre, string apellidos)
 void insertarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
 {
 	ofstream fich("./Tratamiento/"+apellidos+"-"+nombre);
-	fich << Tratamiento.getLineaFichero();
+	fich << tratamiento.getLineaFichero();
 	fich.close();
 }
 
@@ -226,7 +226,7 @@ void modificarTratamientoPaciente(string nombre, string apellidos, Tratamiento t
 
 }
 
-bool Tratamiento::finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
+bool Fichero::finalizarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
 {
 	string linea;
 	Tratamiento aux;
@@ -256,7 +256,7 @@ bool Tratamiento::finalizarTratamientoPaciente(string nombre, string apellidos, 
 
 	if(flag)
 	{
-		Historial hist("Tratamiento " + getNomTratamiento() + "finalizado.","");
+		Historial hist("Tratamiento " + aux.getNomTratamiento() + "finalizado.","");
 		insertarNuevaEntradaHistorial(nombre, apellidos, hist);
 	}
 	return true;
@@ -275,7 +275,7 @@ list<Tratamiento> Fichero::listarTratamientosPaciente(string nombre, string apel
 	{
 		fich >> linea;
 		aux.setLineaFichero(linea);
-		lHist.push_back(aux);
+		lTrat.push_back(aux);
 	}
 
 	fich.close();

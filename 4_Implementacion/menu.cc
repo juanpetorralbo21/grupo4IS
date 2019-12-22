@@ -1,5 +1,8 @@
 
 #include "fichero.h"
+#include "paciente.h"
+#include "cita.h"
+
 
 //Prototipo funciones
 void menuPrincipal();
@@ -9,11 +12,16 @@ void menuDetallesTratamientoPaciente();
 void menuCitas();
 void menuCitasPaciente();
 void opInc();
+Paciente formularioRegistroPaciente();
 
 int main()
 {
-	int mP, mPac, mDPac, mDTPac, mC, mCPac;
-
+	int mP, mPac, mDPac, mDTPac, mC, mCPac; //Variables auxliares para los menus
+	int i;
+	Fichero f; //Clase que contiene toda las acciones con los ficheros
+	/*list<Paciente> auxLP;
+	Paciente auxP;
+/*
 	//MENU PRINCIPAL
 	while (mP != 0)
 	{
@@ -32,10 +40,19 @@ int main()
 
 					switch(mPac)
 					{
+						//Listar pacientes
 						case 1:
+							auxLP = f.listarPacientes();
+
+							while (!auxLP.empty())
+							{
+								auxLP.front().mostrarPaciente();
+								auxLP.pop_front();
+							}
 
 						break;
 
+						//Consultar paciente
 						case 2:
 
 							//MENU OPCIONES PACIENTE
@@ -100,8 +117,14 @@ int main()
 							}
 						break;
 
+						//Introducir un nuevo paciente
 						case 3:
-
+							auxP = formularioRegistroPaciente();
+							if(!f.insertarPaciente(auxP))
+							{
+								cout<< "ERROR AL INTRODUCIR EL PACIENTE DENTRO DEL FICHERO"<<endl;
+								cout << "Paciente con nombre "+auxP.getNombre()+" y apellidos "+auxP.getApellidos()+" ya registrados."<<endl;
+							}
 						break;
 
 						case 0:
@@ -156,7 +179,7 @@ int main()
 	}
 
 	
-
+*/
 	return 0;
 
 }
@@ -230,4 +253,42 @@ void menuCitasPaciente()
 	cout<<"2 CANCELAR CITA"<<endl;
 	cout<<"0 VOLVER ATRAS";
 	cout<<endl<<"-> ";
+}
+
+Paciente formularioRegistroPaciente()
+{
+	/*Paciente aux;
+	string auxS;
+	int auxI;
+/*
+	cout<<"FORMULARIO REGISTRO PACIENTE"<<endl;
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.Paciente::setNombre(auxS);
+
+	cout<<"INTRODUCE APELLIDOS DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.Paciente::setApellidos(auxS);
+
+	cout<<"INTRODUCE LA FECHA DE NACIMIENTO DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.Paciente::setFechaNacimiento(auxS);
+
+	cout<<"INTRODUCE LA DIRECCION DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.Paciente::setDireccion(auxS);
+
+	cout<<"INTRODUCE El NUMERO DE TELEFONO DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxI;
+	aux.Paciente::setTelefono(auxI);
+
+	cout<<"INTRODUCE EL TIPO DE SEGURO DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.Paciente::setSeguro(auxS);*/
 }
