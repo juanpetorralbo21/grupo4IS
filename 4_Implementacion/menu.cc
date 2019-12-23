@@ -1,7 +1,5 @@
 
 #include "fichero.h"
-#include "paciente.h"
-#include "cita.h"
 
 
 //Prototipo funciones
@@ -16,12 +14,12 @@ Paciente formularioRegistroPaciente();
 
 int main()
 {
-	int mP, mPac, mDPac, mDTPac, mC, mCPac; //Variables auxliares para los menus
+	int mP=-1, mPac, mDPac, mDTPac, mC, mCPac; //Variables auxliares para los menus
 	int i;
 	Fichero f; //Clase que contiene toda las acciones con los ficheros
-	/*list<Paciente> auxLP;
+	list<Paciente> auxLP;
 	Paciente auxP;
-/*
+
 	//MENU PRINCIPAL
 	while (mP != 0)
 	{
@@ -179,7 +177,7 @@ int main()
 	}
 
 	
-*/
+
 	return 0;
 
 }
@@ -257,10 +255,10 @@ void menuCitasPaciente()
 
 Paciente formularioRegistroPaciente()
 {
-	/*Paciente aux;
+	Paciente aux;
 	string auxS;
 	int auxI;
-/*
+
 	cout<<"FORMULARIO REGISTRO PACIENTE"<<endl;
 	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
@@ -290,5 +288,5 @@ Paciente formularioRegistroPaciente()
 	cout<<"INTRODUCE EL TIPO DE SEGURO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setSeguro(auxS);*/
+	aux.Paciente::setSeguro(auxS);
 }
