@@ -31,33 +31,34 @@ bool Cita::setTelefono(int nTelefono)
 
 void Cita::setLineaFichero(string linea)
 {
-	int pos; //variable auxiliar
+	size_t pos; //variable auxiliar
 	string sub; //cadena auxiliar
+	std::string::size_type sz;
 
 	//Nombre del paciente
 	pos=linea.find(",");
 	setNombre(linea.substr(0,pos));
-	sub=linea.substr(pos,linea.size());
+	sub=linea.substr(pos+1,linea.size());
 
 	//Apellido del paciente
 	pos=sub.find(",");
 	setApellidos(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Fecha de la cita
 	pos=sub.find(",");
 	setFecha(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Hora de la cita
 	pos=sub.find(",");
 	setHora(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Telefono del paciente
 	pos=sub.find(",");
 	setTelefono(stoi(sub.substr(0,pos), nullptr, 16));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Modificar del motivo
 	setMotivo(sub);
@@ -67,7 +68,8 @@ void Cita::mostrarCita()
 {
 	cout << "CITA MEDICA";
 	cout << "-----------------------";
-	cout << "Nombre: " << getApellidosyNombre();
+	cout << "Nombre: " << getNombre();
+	cout<< "Apellidos " << getApellidos();
 	cout << "Fecha de la cita: " << getFecha();
 	cout << "Hora de la cita: " << getHora();
 	cout << "Telefono: " << getTelefono();
