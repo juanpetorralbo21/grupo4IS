@@ -19,28 +19,28 @@ Tratamiento::Tratamiento(string nTrat, string dosis, string regularidad, string 
 //Funcion que carga un tratamiento del fichero
 void Tratamiento::setLineaFichero(string linea)
 {
-	int pos; //variable auxiliar
+	size_t pos; //variable auxiliar
 	string sub; //cadena auxiliar
 
 	//Nombre del tratamiento
 	pos=linea.find(",");
 	setNomTratamiento(linea.substr(0,pos));
-	sub=linea.substr(pos,linea.size());
+	sub=linea.substr(pos+1,linea.size());
 
 	//Apellido del paciente
 	pos=sub.find(",");
 	setDosis(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Fecha de la cita
 	pos=sub.find(",");
 	setRegularidad(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Hora de la cita
 	pos=sub.find(",");
 	setFechaInicio(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Modificar del motivo
 	setFechaFin(sub);
@@ -51,10 +51,10 @@ void Tratamiento::setLineaFichero(string linea)
 void Tratamiento::mostrarTratamiento()
 {
 	cout << "TRATMIENTO";
-	cout << "-----------------------";
-	cout << "Nombre del tratamiento: " << getNomTratamiento();
-	cout << "Dosis: " << getDosis();
-	cout << "regularidad: " << getRegularidad();
-	cout << "Fecha de inicio " << getFechaInicio();
-	cout << "Fecha de fin: " << getFechaFin();
+	cout << endl<< "-----------------------"<< endl;
+	cout << "Nombre del tratamiento: " << getNomTratamiento() << endl;
+	cout << "Dosis: " << getDosis()<< endl;
+	cout << "regularidad: " << getRegularidad()<< endl;
+	cout << "Fecha de inicio " << getFechaInicio()<< endl;
+	cout << "Fecha de fin: " << getFechaFin()<< endl;
 }

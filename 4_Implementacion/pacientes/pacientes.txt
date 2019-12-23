@@ -3,3 +3,8 @@ Sheila,Denamiel,05/06/94,Belmez,609694320,2
 Carlos,Marin,04/04/02,cordoba,609483721,2
 Antonio,Marin,1234,villa,608601430,2
 Antonio,Marin,d,d,605403020,2
+a,a,a,a,543433434,2
+Pepe,asdfa,s,s,608605403,1
+Antonio,Marin,d,d,608603420,1
+Antonio,Marin,sasda,asdas,608603243,2
+Carlos,Marin,d,d,608402140,2

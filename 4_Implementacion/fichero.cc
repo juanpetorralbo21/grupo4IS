@@ -187,7 +187,7 @@ list<Cita> Fichero::listarCitas()
 
 void Fichero::insertarNuevaEntradaHistorial(string nombre, string apellidos, Historial historial)
 {
-	ofstream fich("./Historiales/"+apellidos+"-"+nombre);
+	ofstream fich("./historiales/"+apellidos+"-"+nombre);
 	fich << historial.getLineaFichero();
 	fich.close();
 }
@@ -196,11 +196,11 @@ void Fichero::insertarNuevaEntradaHistorial(string nombre, string apellidos, His
 list<Historial> Fichero::listarHistorial(string nombre, string apellidos)
 {
 	list<Historial> lHist; //Lista de entradas al historial
-	ifstream fich("./Historiales/"+apellidos+"-"+nombre);
+	ifstream fich("./historiales/"+apellidos+"-"+nombre, ofstream::app);
 	string linea;
 	Historial aux;
 
-	while (!fich.eof()) 
+	while (getline(fich,linea)) 
 	{
 		fich >> linea;
 		aux.setLineaFichero(linea);
@@ -213,7 +213,7 @@ list<Historial> Fichero::listarHistorial(string nombre, string apellidos)
 
 void insertarTratamientoPaciente(string nombre, string apellidos, Tratamiento tratamiento)
 {
-	ofstream fich("./Tratamiento/"+apellidos+"-"+nombre);
+	ofstream fich("./Tratamiento/"+apellidos+"-"+nombre, ofstream::app);
 	fich << tratamiento.getLineaFichero();
 	fich.close();
 }
@@ -234,7 +234,7 @@ bool Fichero::finalizarTratamientoPaciente(string nombre, string apellidos, Trat
 	ofstream auxF("aux.txt");
 
 	//Metemos todo el contenido de los tratamientos menos el finalizado
-	while (!fich.eof()) 
+	while (getline(fich,linea)) 
 	{
 		fich >> linea;
 		aux.setLineaFichero(linea);

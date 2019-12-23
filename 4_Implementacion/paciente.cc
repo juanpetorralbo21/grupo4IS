@@ -30,33 +30,34 @@ bool Paciente::setTelefono(int nTelefono)
 
 void Paciente::setLineaFichero(string linea)
 {
-	int pos; //variable auxiliar
+	size_t pos; //variable auxiliar
 	string sub; //cadena auxiliar
+	std::string::size_type sz;
 
 	//Para el nombre
 	pos=linea.find(",");
 	setNombre(linea.substr(0,pos));
-	sub=linea.substr(pos,linea.size());
+	sub=linea.substr(pos+1,linea.size());
 
 	//Para los apellidos
 	pos=sub.find(",");
 	setApellidos(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Para Fecha de nacimiento
 	pos=sub.find(",");
 	setFechaNacimiento(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Para direccion
 	pos=sub.find(",");
 	setDireccion(sub.substr(0,pos));
-	sub=sub.substr(pos,sub.size());
+	sub=sub.substr(pos+1,sub.size());
 
 	//Para telefono
 	pos=sub.find(",");
-	setTelefono(stoi(sub.substr(0,pos), nullptr, 16));
-	sub=sub.substr(pos,sub.size());
+	setTelefono(std::stoi(sub.substr(0,pos), &sz));
+	sub=sub.substr(pos+1,sub.size());
 
 	//Para tipo de seguro
 	setSeguro(sub);
@@ -64,9 +65,10 @@ void Paciente::setLineaFichero(string linea)
 
 void Paciente::mostrarPaciente()
 {
-	std::cout << "DATOS PACIENTE";
+	std::cout << "DATOS PACIENTE" << std::endl;
 	std::cout << "-----------------------" << std::endl;
-	std::cout << "Nombre: " << getApellidosyNombre()<< std::endl;
+	std::cout << "Nombre: " << getNombre() << std::endl;
+	std::cout << "Apellidos: " << getApellidos() << std::endl;
 	std::cout << "Fecha nacimiento: " << getFechaNacimiento()<< std::endl;
 	std::cout << "Direccion: " << getDireccion()<< std::endl;
 	std::cout << "Telefono: " << getTelefono()<< std::endl;

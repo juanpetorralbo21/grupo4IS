@@ -11,6 +11,7 @@ void menuCitas();
 void menuCitasPaciente();
 void opInc();
 Paciente formularioRegistroPaciente();
+Tratamiento formularioRegistroTratamiento();
 
 int main()
 {
@@ -20,9 +21,16 @@ int main()
 	list<Paciente> auxLP;
 	Paciente auxP;
 
-	auxLP = f.listarPacientes();
+	list<Historial> auxHist;
+	Historial auxH;
 
+	list<Tratamiento> auxLTrat;
+	Tratamiento auxT;
+	 
+
+	auxLP = f.listarPacientes();
 	string nombA, apeA;
+	string detalles, fecha;
 
 	//MENU PRINCIPAL
 	while (mP != 0)
@@ -44,6 +52,7 @@ int main()
 					{
 						//Listar pacientes
 						case 1:
+							auxLP = f.listarPacientes();
 							while (!auxLP.empty())
 							{
 								auxLP.front().mostrarPaciente();
@@ -90,10 +99,26 @@ int main()
 									break;
 
 									case 3:
+										auxHist = f.listarHistorial(nombA,apeA);
 
+										while (!auxHist.empty())
+										{
+											auxHist.front().mostrarHistorial();
+											auxHist.pop_front();
+										}
 									break;
 
 									case 4:
+										cout << "Introduce lo ocurrido: " << endl;
+										cin >> detalles;
+
+										cout << "Introduce la fecha: " << endl;
+										cin >> fecha;
+
+										auxH.setDetalles(detalles);
+										auxH.setFecha(fecha);
+
+										f.insertarNuevaEntradaHistorial(nombA, apeA, auxH);
 									break;
 
 									case 5:
@@ -110,7 +135,7 @@ int main()
 												break;
 
 												case 2:
-
+													f.insertarTratamientoPaciente(nombA, apeA, Tratamiento tratamiento);
 												break;
 
 												case 0:
@@ -119,8 +144,6 @@ int main()
 												default:
 													opInc();
 											}
-
-
 										}
 										
 									break;
@@ -238,7 +261,7 @@ void menuDetallesPaciente()
 	cout<<"2 MODIFICAR DATOS"<<endl;
 	cout<<"3 CONSULTAR HISTORIAL MÉDICO"<<endl;
 	cout<<"4 INTRODUCIR NUEVO HISTORIAL MÉDICO"<<endl;
-	cout<<"5 CONSULTAR TRATAMIENTO "<<endl;
+	cout<<"5 CONSULTAR TRATAMIENTOS DEL PACIENTE "<<endl;
 	cout<<"0 VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
@@ -247,8 +270,8 @@ void menuDetallesTratamientoPaciente()
 {
 	cout<<"MENU DETALLES TRATAMIENTO PACIENTES"<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 CONSULTAR TRATAMIENTO"<<endl;
-	cout<<"2 MODIFICAR TRATAMIENTO"<<endl;
+	cout<<"1 CONSULTAR TRATAMIENTO DEL PACIENTE"<<endl;
+	cout<<"2 INTRODUCIR NUEVO TRATAMIENTO"<<endl;
 	cout<<"3 FINALIZAR TRATAMIENTO"<<endl;
 	cout<<"0 VOLVER ATRAS";
 	cout<<endl<<"-> ";
@@ -313,4 +336,31 @@ Paciente formularioRegistroPaciente()
 	aux.setSeguro(auxS);
 
 	return aux;
+}
+
+Tratamiento formularioRegistroTratamiento()
+{
+	Tratamiento aux;
+	string auxT;
+
+	cout<<"FORMULARIO REGISTRO TRATAMIENTO DEL PACIENTE"<<endl;
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setNombre(auxS);
+
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setNombre(auxS);
+
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setNombre(auxS);
+
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setNombre(auxS);
 }

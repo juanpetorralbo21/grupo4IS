@@ -7,6 +7,8 @@
 	#include <string>
 	using std::string;
 	using namespace std;
+	#include <fstream>
+	#include <iostream>
 
   class Historial{
 
@@ -31,6 +33,8 @@
 		//Devuelve la linea con todos los datos para almacenarlos en el fichero
 		inline string getLineaFichero() const {return getFecha()+","+getDetalles();} 
   		void setLineaFichero(string linea); //el inverso del anterior
+
+  		void mostrarHistorial();
   };
 
 #endif
