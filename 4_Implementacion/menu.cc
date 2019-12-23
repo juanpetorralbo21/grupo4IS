@@ -77,13 +77,7 @@ int main()
 
 							if(f.buscarPacienteNombreCompleto(nombA, apeA))
 							{
-								while (!auxLP.empty())
-								{
-									if(auxLP.front().getNombre() == nombA && auxLP.front().getApellidos() == apeA)
-										auxP=auxLP.front();
-
-									auxLP.pop_front();
-								}
+								
 
 							system("clear");
 							//MENU OPCIONES PACIENTE
@@ -97,7 +91,16 @@ int main()
 								{
 									case 1:
 										cout <<endl;
-										auxP.mostrarPaciente();
+										auxLP = f.listarPacientes();
+										while (!auxLP.empty())
+										{
+											if(auxLP.front().getNombre() == nombA && auxLP.front().getApellidos() == apeA)
+												auxLP.front().mostrarPaciente();
+
+											auxLP.pop_front();
+											cout << endl;
+										}
+										
 									break;
 
 									case 2:
@@ -112,23 +115,26 @@ int main()
 										else
 										{
 											cout << endl << "HISTORIAL DE " + nombA + " " +apeA << endl;
-											cout<<"----------------------------------------------"<<endl<<endl;
+											cout<<"----------------------------------------------"<<endl;
 											while (!auxHist.empty())
 											{
 												auxHist.front().mostrarHistorial();
 												auxHist.pop_front();
 											}
+
+											cout <<endl;
 										}
 									break;
 
 									case 4:
+										system("clear");
 										cout<<"	*** FORMULARIO REGISTRO HISTORIAL ***"<<endl;
-										cout<<"----------------------------------------------"<<endl<<endl;
+										cout<<"----------------------------------------------"<<endl;
 										cout<<endl << "Introduce lo ocurrido: " << endl;
 										cout<<endl<<"-> ";
 										cin >> detalles;
 
-										cout << "Introduce la fecha: " << endl;
+										cout <<endl<< "Introduce la fecha: " << endl;
 										cout<<endl<<"-> ";
 										cin >> fecha;
 
