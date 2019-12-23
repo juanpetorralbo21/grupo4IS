@@ -12,7 +12,7 @@ void menuCitasPaciente();
 void opInc();
 Paciente formularioRegistroPaciente();
 Tratamiento formularioRegistroTratamiento();
-
+Cita formularioRegistroCitas();
 int main()
 {
 	int mP=-1, mPac=-1, mDPac=-1, mDTPac=-1, mC=-1, mCPac=-1; //Variables auxliares para los menus
@@ -23,6 +23,9 @@ int main()
 
 	list<Historial> auxHist;
 	Historial auxH;
+
+	list<Cita> auxLC;
+	Cita auxC;
 
 	list<Tratamiento> auxLTrat;
 	Tratamiento auxT;
@@ -228,16 +231,51 @@ int main()
 
 					switch(mC)
 					{
+						//Listar Citas
+
 						case 1:
+
+						auxLC = f.listarCitas();
+							while (!auxLC.empty())
+							{
+								auxLC.front().mostrarCita();
+								auxLC.pop_front();
+							}
 
 						break;
 
+						//Introducir nueva Cita
+
 						case 2:
-
-
+						auxC = formularioRegistroCitas();
+						cout <<endl<< "Cita introducida correctamente"<<endl;
+						
 						break;
 
 						case 3:
+						//Hay que buscar al paciente introducido
+							cout << endl << "Introduce los datos del paciente" <<endl;
+							cout << "Introduce el nombre del paciente:" <<endl;
+							cin >> nombA;
+							cout << "Introduce los apellidos del paciente: "<<endl;
+							cin >> apeA;
+
+							if(f.buscarCitaNombre(nombA, apeA))
+							{
+								while (!auxLC.empty())
+								{
+									if(auxLC.front().getNombre() == nombA && auxLC.front().getApellidos() == apeA)
+										auxC=auxLC.front();
+
+									auxLC.pop_front();
+								}
+
+								auxC.mostrarCita();
+							}
+
+							else{
+								cout << "El nombre introducido no existe en nuestros pacientes"<<endl;
+							}
 
 						break;
 
@@ -416,4 +454,44 @@ Tratamiento formularioRegistroTratamiento()
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setFechaFin(auxS);
+}
+
+Cita formularioRegistroCitas()
+{
+	Cita aux;
+	string auxS;
+	int auxI;
+
+	cout<<"FORMULARIO REGISTRO CITAS"<<endl;
+	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setNombre(auxS);
+
+	cout<<"INTRODUCE APELLIDOS DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setApellidos(auxS);
+
+	cout<<"INTRODUCE LA FECHA DE LA CITA"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setFecha(auxS);
+
+	cout<<"INTRODUCE LA HORA DE LA CITA"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setHora(auxS);
+
+	cout<<"INTRODUCE El NUMERO DE TELEFONO DEL PACIENTE"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxI;
+	aux.setTelefono(auxI);
+
+	cout<<"INTRODUCE EL MOTIVO DE LA CITA" <<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setMotivo(auxS);
+
+	return aux;
 }
