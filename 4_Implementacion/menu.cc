@@ -157,6 +157,10 @@ int main()
 												case 1:
 													auxLTrat= f.listarTratamientosPaciente(nombA, apeA);
 
+													if(auxLTrat.empty())
+													{
+														cout << endl << "El paciente no tiene tratamientos asignados"<<endl;
+													}
 													while (!auxLTrat.empty())
 													{
 														auxLTrat.front().mostrarTratamiento();
