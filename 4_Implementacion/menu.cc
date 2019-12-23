@@ -32,6 +32,7 @@ int main()
 	string nombA, apeA;
 	string detalles, fecha;
 
+	system("clear");
 	//MENU PRINCIPAL
 	while (mP != 0)
 	{
@@ -43,6 +44,7 @@ int main()
 			//MENU PACIENTES
 			case 1:
 
+				system("clear");
 				while(mPac != 0)
 				{
 					menuPacientes();
@@ -81,6 +83,7 @@ int main()
 									auxLP.pop_front();
 								}
 
+							system("clear");
 							//MENU OPCIONES PACIENTE
 							while(mDPac != 0)
 							{
@@ -123,6 +126,7 @@ int main()
 
 									case 5:
 
+										system("clear");
 										while (mDTPac != 0)
 										{
 											menuDetallesTratamientoPaciente();
@@ -242,8 +246,8 @@ void opInc()
 }
 
 //Funciones
-void menuPrincipal(){
-	system("clear");
+void menuPrincipal()
+{
 	cout<<endl<<"	*** MENU PRINCIPAL ***"<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
@@ -255,7 +259,6 @@ void menuPrincipal(){
 
 void menuPacientes()
 {
-	system("clear");
 	cout<<endl<<"	*** MENU PACIENTES ***"<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
@@ -268,7 +271,6 @@ void menuPacientes()
 
 void menuDetallesPaciente()
 {
-	system("clear");
 	cout<<"	*** MENU DETALLES PACIENTES *** "<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
@@ -283,7 +285,6 @@ void menuDetallesPaciente()
 
 void menuDetallesTratamientoPaciente()
 {
-	system("clear");
 	cout<<"	*** MENU DETALLES TRATAMIENTO PACIENTES *** "<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
@@ -296,7 +297,6 @@ void menuDetallesTratamientoPaciente()
 
 void menuCitas()
 {
-	system("clear");
 	cout<<"	*** MENU CITAS ***"<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
@@ -309,7 +309,6 @@ void menuCitas()
 
 void menuCitasPaciente()
 {
-	system("clear");
 	cout<<"	*** MENU CITAS PACIENTE ***"<<endl;
 	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
