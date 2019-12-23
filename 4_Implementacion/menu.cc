@@ -57,6 +57,7 @@ int main()
 							auxLP = f.listarPacientes();
 							while (!auxLP.empty())
 							{
+								cout << endl;
 								auxLP.front().mostrarPaciente();
 								auxLP.pop_front();
 							}
@@ -67,10 +68,11 @@ int main()
 						case 2:
 
 							//Hay que buscar al paciente introducido
-							cout << endl << "Introduce los datos del paciente" <<endl;
-							cout << "Introduce el nombre del paciente:" <<endl;
+							cout <<endl<< "Introduce el nombre del paciente:" <<endl;
+							cout<<endl<<"-> ";
 							cin >> nombA;
 							cout << "Introduce los apellidos del paciente: "<<endl;
+							cout<<endl<<"-> ";
 							cin >> apeA;
 
 							if(f.buscarPacienteNombreCompleto(nombA, apeA))
@@ -94,6 +96,7 @@ int main()
 								switch(mDPac)
 								{
 									case 1:
+										cout <<endl;
 										auxP.mostrarPaciente();
 									break;
 
@@ -102,20 +105,31 @@ int main()
 									break;
 
 									case 3:
-										auxHist = f.listarHistorial(nombA,apeA);
 
-										while (!auxHist.empty())
+										auxHist = f.listarHistorial(nombA,apeA);
+										if(auxHist.empty())
+											cout << endl << "No hay entradas al historial registradas." << endl;
+										else
 										{
-											auxHist.front().mostrarHistorial();
-											auxHist.pop_front();
+											cout << endl << "HISTORIAL DE " + nombA + " " +apeA << endl;
+											cout<<"----------------------------------------------"<<endl<<endl;
+											while (!auxHist.empty())
+											{
+												auxHist.front().mostrarHistorial();
+												auxHist.pop_front();
+											}
 										}
 									break;
 
 									case 4:
-										cout << "Introduce lo ocurrido: " << endl;
+										cout<<"	*** FORMULARIO REGISTRO HISTORIAL ***"<<endl;
+										cout<<"----------------------------------------------"<<endl<<endl;
+										cout<<endl << "Introduce lo ocurrido: " << endl;
+										cout<<endl<<"-> ";
 										cin >> detalles;
 
 										cout << "Introduce la fecha: " << endl;
+										cout<<endl<<"-> ";
 										cin >> fecha;
 
 										auxH.setDetalles(detalles);
@@ -324,33 +338,35 @@ Paciente formularioRegistroPaciente()
 	string auxS;
 	int auxI;
 
-	cout<<"FORMULARIO REGISTRO PACIENTE"<<endl;
+	system("clear");
+	cout<<"	*** FORMULARIO REGISTRO PACIENTE ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setNombre(auxS);
 
-	cout<<"INTRODUCE APELLIDOS DEL PACIENTE"<<endl;
+	cout<<endl<<"INTRODUCE APELLIDOS DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setApellidos(auxS);
 
-	cout<<"INTRODUCE LA FECHA DE NACIMIENTO DEL PACIENTE"<<endl;
+	cout<<endl<<"INTRODUCE LA FECHA DE NACIMIENTO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setFechaNacimiento(auxS);
 
-	cout<<"INTRODUCE LA DIRECCION DEL PACIENTE"<<endl;
+	cout<<endl<<"INTRODUCE LA DIRECCION DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setDireccion(auxS);
 
-	cout<<"INTRODUCE El NUMERO DE TELEFONO DEL PACIENTE"<<endl;
+	cout<<endl<<"INTRODUCE El NUMERO DE TELEFONO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxI;
 	aux.setTelefono(auxI);
 
-	cout<<"INTRODUCE EL TIPO DE SEGURO DEL PACIENTE"<<endl;
+	cout<<endl<<"INTRODUCE EL TIPO DE SEGURO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setSeguro(auxS);
@@ -363,28 +379,30 @@ Tratamiento formularioRegistroTratamiento()
 	Tratamiento aux;
 	string auxS;
 
-	cout<<"FORMULARIO REGISTRO TRATAMIENTO DEL PACIENTE"<<endl;
+	system("clear");
+	cout<<"	*** FORMULARIO REGISTRO TRATAMIENTO DEL PACIENTE ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE NOMBRE DEL TRATAMIENTO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setNomTratamiento(auxS);
 
-	cout<<"INTRODUCE LA DOSIS"<<endl;
+	cout<<endl<<"INTRODUCE LA DOSIS"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setDosis(auxS);
 
-	cout<<"INTRODUCE LA REGULARIDAD DEL TRATAMIENTO"<<endl;
+	cout<<endl<<"INTRODUCE LA REGULARIDAD DEL TRATAMIENTO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setRegularidad(auxS);
 
-	cout<<"INTRODUCE LA FECHA INICIO"<<endl;
+	cout<<endl<<"INTRODUCE LA FECHA INICIO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setFechaInicio(auxS);
 
-	cout<<"INTRODUCE LA FECHA FIN"<<endl;
+	cout<<endl<<"INTRODUCE LA FECHA FIN"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
 	aux.setFechaFin(auxS);
