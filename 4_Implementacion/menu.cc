@@ -20,6 +20,10 @@ int main()
 	list<Paciente> auxLP;
 	Paciente auxP;
 
+	auxLP = f.listarPacientes();
+
+	string nombA, apeA;
+
 	//MENU PRINCIPAL
 	while (mP != 0)
 	{
@@ -40,8 +44,6 @@ int main()
 					{
 						//Listar pacientes
 						case 1:
-							auxLP = f.listarPacientes();
-
 							while (!auxLP.empty())
 							{
 								auxLP.front().mostrarPaciente();
@@ -53,6 +55,23 @@ int main()
 						//Consultar paciente
 						case 2:
 
+							//Hay que buscar al paciente introducido
+							cout << endl << "Introduce los datos del paciente" <<endl;
+							cout << "Introduce el nombre del paciente:" <<endl;
+							cin >> nombA;
+							cout << "Introduce los apellidos del paciente: "<<endl;
+							cin >> apeA;
+
+							if(f.buscarPacienteNombreCompleto(nombA, apeA))
+							{
+								while (!auxLP.empty())
+								{
+									if(auxLP.front().getNombre() == nombA && auxLP.front().getApellidos() == apeA)
+										auxP=auxLP.front();
+
+									auxLP.pop_front();
+								}
+
 							//MENU OPCIONES PACIENTE
 							while(mDPac != 0)
 							{
@@ -63,7 +82,7 @@ int main()
 								switch(mDPac)
 								{
 									case 1:
-
+										auxP.mostrarPaciente();
 									break;
 
 									case 2:
@@ -113,6 +132,10 @@ int main()
 										opInc();
 								}
 							}
+							}//if
+							else{
+								cout << endl << "Pacinte introducido no existente. " << endl;
+							}	
 						break;
 
 						//Introducir un nuevo paciente
@@ -123,6 +146,8 @@ int main()
 								cout<< "ERROR AL INTRODUCIR EL PACIENTE DENTRO DEL FICHERO"<<endl;
 								cout << "Paciente con nombre "+auxP.getNombre()+" y apellidos "+auxP.getApellidos()+" ya registrados."<<endl;
 							}
+							else
+								cout <<endl<< "Paciente introducido correctamente"<<endl;
 						break;
 
 						case 0:
@@ -186,7 +211,7 @@ void opInc()
 
 //Funciones
 void menuPrincipal(){
-	cout<<"MENU PRINCIPAL"<<endl;
+	cout<<endl<<"MENU PRINCIPAL"<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
 	cout<<"1 PACIENTES"<<endl;
 	cout<<"2 CITAS"<<endl;
@@ -196,7 +221,7 @@ void menuPrincipal(){
 
 void menuPacientes()
 {
-	cout<<"MENU PACIENTES"<<endl;
+	cout<<endl<<"MENU PACIENTES"<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
 	cout<<"1 LISTAR PACIENTES"<<endl;
 	cout<<"2 CONSULTAR PACIENTE"<<endl;
@@ -260,30 +285,32 @@ Paciente formularioRegistroPaciente()
 	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setNombre(auxS);
+	aux.setNombre(auxS);
 
 	cout<<"INTRODUCE APELLIDOS DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setApellidos(auxS);
+	aux.setApellidos(auxS);
 
 	cout<<"INTRODUCE LA FECHA DE NACIMIENTO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setFechaNacimiento(auxS);
+	aux.setFechaNacimiento(auxS);
 
 	cout<<"INTRODUCE LA DIRECCION DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setDireccion(auxS);
+	aux.setDireccion(auxS);
 
 	cout<<"INTRODUCE El NUMERO DE TELEFONO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxI;
-	aux.Paciente::setTelefono(auxI);
+	aux.setTelefono(auxI);
 
 	cout<<"INTRODUCE EL TIPO DE SEGURO DEL PACIENTE"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.Paciente::setSeguro(auxS);
+	aux.setSeguro(auxS);
+
+	return aux;
 }

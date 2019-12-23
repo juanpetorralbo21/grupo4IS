@@ -36,8 +36,7 @@ bool Fichero::buscarPacienteNombreCompleto(string nombre, string apellidos)
 
 	while (getline(fich,linea)) 
 	{
-		cout << linea;
-		//aux.setLineaFichero(linea);
+		aux.setLineaFichero(linea);
 
 		//Ha encontrado al paciente
 		if(aux.getNombre() == nombre && aux.getApellidos() == apellidos)
