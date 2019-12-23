@@ -1,6 +1,6 @@
 
 #include "fichero.h"
-
+#include <stdlib.h>
 
 //Prototipo funciones
 void menuPrincipal();
@@ -131,11 +131,20 @@ int main()
 											switch(mDTPac)
 											{
 												case 1:
+													auxLTrat= f.listarTratamientosPaciente(nombA, apeA);
 
+													while (!auxLTrat.empty())
+													{
+														auxLTrat.front().mostrarTratamiento();
+														auxLTrat.pop_front();
+													}
 												break;
 
 												case 2:
-													f.insertarTratamientoPaciente(nombA, apeA, Tratamiento tratamiento);
+													auxT = formularioRegistroTratamiento();
+													//f.insertarTratamientoPaciente(nombA, apeA, auxT);
+
+
 												break;
 
 												case 0:
@@ -234,67 +243,79 @@ void opInc()
 
 //Funciones
 void menuPrincipal(){
-	cout<<endl<<"MENU PRINCIPAL"<<endl;
+	system("clear");
+	cout<<endl<<"	*** MENU PRINCIPAL ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 PACIENTES"<<endl;
-	cout<<"2 CITAS"<<endl;
-	cout<<"0 SALIR"<<endl;
+	cout<<"	1- PACIENTES"<<endl;
+	cout<<"	2- CITAS"<<endl;
+	cout<<"	0- SALIR"<<endl;
 	cout<<endl<<"-> ";
 }
 
 void menuPacientes()
 {
-	cout<<endl<<"MENU PACIENTES"<<endl;
+	system("clear");
+	cout<<endl<<"	*** MENU PACIENTES ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 LISTAR PACIENTES"<<endl;
-	cout<<"2 CONSULTAR PACIENTE"<<endl;
-	cout<<"3 INTRODUCIR NUEVO PACIENTE"<<endl;
-	cout<<"0 VOLVER ATRAS";
+	cout<<"	1- LISTAR PACIENTES"<<endl;
+	cout<<"	2- CONSULTAR PACIENTE"<<endl;
+	cout<<"	3- INTRODUCIR NUEVO PACIENTE"<<endl;
+	cout<<"	0- VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
 
 void menuDetallesPaciente()
 {
-	cout<<"MENU DETALLES PACIENTES"<<endl;
+	system("clear");
+	cout<<"	*** MENU DETALLES PACIENTES *** "<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 CONSULTAR DATOS"<<endl;
-	cout<<"2 MODIFICAR DATOS"<<endl;
-	cout<<"3 CONSULTAR HISTORIAL MÉDICO"<<endl;
-	cout<<"4 INTRODUCIR NUEVO HISTORIAL MÉDICO"<<endl;
-	cout<<"5 CONSULTAR TRATAMIENTOS DEL PACIENTE "<<endl;
-	cout<<"0 VOLVER ATRAS";
+	cout<<"	1- CONSULTAR DATOS"<<endl;
+	cout<<"	2- MODIFICAR DATOS"<<endl;
+	cout<<"	3- CONSULTAR HISTORIAL MÉDICO"<<endl;
+	cout<<"	4- INTRODUCIR NUEVO HISTORIAL MÉDICO"<<endl;
+	cout<<"	5- CONSULTAR TRATAMIENTOS DEL PACIENTE "<<endl;
+	cout<<"	0- VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
 
 void menuDetallesTratamientoPaciente()
 {
-	cout<<"MENU DETALLES TRATAMIENTO PACIENTES"<<endl;
+	system("clear");
+	cout<<"	*** MENU DETALLES TRATAMIENTO PACIENTES *** "<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 CONSULTAR TRATAMIENTO DEL PACIENTE"<<endl;
-	cout<<"2 INTRODUCIR NUEVO TRATAMIENTO"<<endl;
-	cout<<"3 FINALIZAR TRATAMIENTO"<<endl;
-	cout<<"0 VOLVER ATRAS";
+	cout<<"	1- CONSULTAR TRATAMIENTO DEL PACIENTE"<<endl;
+	cout<<"	2- INTRODUCIR NUEVO TRATAMIENTO"<<endl;
+	cout<<"	3- FINALIZAR TRATAMIENTO"<<endl;
+	cout<<"	0- VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
 
 void menuCitas()
 {
-	cout<<"MENU CITAS"<<endl;
+	system("clear");
+	cout<<"	*** MENU CITAS ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 LISTAR CITAS"<<endl;
-	cout<<"2 NUEVA CITA"<<endl;
-	cout<<"3 BUSCAR CITA POR PACIENTE"<<endl;
-	cout<<"0 VOLVER ATRAS";
+	cout<<"	1- LISTAR CITAS"<<endl;
+	cout<<"	2- NUEVA CITA"<<endl;
+	cout<<"	3- BUSCAR CITA POR PACIENTE"<<endl;
+	cout<<"	0- VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
 
 void menuCitasPaciente()
 {
-	cout<<"MENU CITAS PACIENTE"<<endl;
+	system("clear");
+	cout<<"	*** MENU CITAS PACIENTE ***"<<endl;
+	cout<<"----------------------------------------------"<<endl<<endl;
 	cout<<"INTRODUCE EL NUMERO DE OPERACION"<<endl<<endl;
-	cout<<"1 MODIFICAR CITA"<<endl;
-	cout<<"2 CANCELAR CITA"<<endl;
-	cout<<"0 VOLVER ATRAS";
+	cout<<"	1- MODIFICAR CITA"<<endl;
+	cout<<"	2- CANCELAR CITA"<<endl;
+	cout<<"	0- VOLVER ATRAS";
 	cout<<endl<<"-> ";
 }
 
@@ -341,26 +362,31 @@ Paciente formularioRegistroPaciente()
 Tratamiento formularioRegistroTratamiento()
 {
 	Tratamiento aux;
-	string auxT;
+	string auxS;
 
 	cout<<"FORMULARIO REGISTRO TRATAMIENTO DEL PACIENTE"<<endl;
-	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<"INTRODUCE NOMBRE DEL TRATAMIENTO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.setNombre(auxS);
+	aux.setNomTratamiento(auxS);
 
-	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<"INTRODUCE LA DOSIS"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.setNombre(auxS);
+	aux.setDosis(auxS);
 
-	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<"INTRODUCE LA REGULARIDAD DEL TRATAMIENTO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.setNombre(auxS);
+	aux.setRegularidad(auxS);
 
-	cout<<"INTRODUCE NOMBRE DEL PACIENTE"<<endl;
+	cout<<"INTRODUCE LA FECHA INICIO"<<endl;
 	cout<<endl<<"-> ";
 	cin >> auxS;
-	aux.setNombre(auxS);
+	aux.setFechaInicio(auxS);
+
+	cout<<"INTRODUCE LA FECHA FIN"<<endl;
+	cout<<endl<<"-> ";
+	cin >> auxS;
+	aux.setFechaFin(auxS);
 }
