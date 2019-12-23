@@ -13,14 +13,13 @@ Fichero::Fichero(string nPacientes, string nCitas, string nTratamientos)
 }
 
 //FUNCIONES DE LA CLASE PACIENTE
-
 bool Fichero::insertarPaciente(Paciente paciente)
 {	
 	//No se encuentra dentro del fichero
 	if (!buscarPacienteNombreCompleto(paciente.getNombre(), paciente.getApellidos()))
 	{
-		ofstream fich("./"+getNFPacientes());
-		fich << paciente.getLineaFichero();
+		ofstream fich("./"+getNFPacientes(),ofstream::app);
+		fich << paciente.getLineaFichero() << endl ;
 		fich.close();
 		return true;
 	}
@@ -35,10 +34,10 @@ bool Fichero::buscarPacienteNombreCompleto(string nombre, string apellidos)
 	Paciente aux;
 	ifstream fich("./"+getNFPacientes());
 
-	while (!fich.eof()) 
+	while (getline(fich,linea)) 
 	{
-		fich >> linea;
-		aux.setLineaFichero(linea);
+		cout << linea;
+		//aux.setLineaFichero(linea);
 
 		//Ha encontrado al paciente
 		if(aux.getNombre() == nombre && aux.getApellidos() == apellidos)

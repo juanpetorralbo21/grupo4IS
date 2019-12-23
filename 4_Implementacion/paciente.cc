@@ -65,10 +65,10 @@ void Paciente::setLineaFichero(string linea)
 void Paciente::mostrarPaciente()
 {
 	std::cout << "DATOS PACIENTE";
-	std::cout << "-----------------------";
-	std::cout << "Nombre: " << getApellidosyNombre();
-	std::cout << "Fecha nacimiento: " << getFechaNacimiento();
-	std::cout << "Direccion: " << getDireccion();
-	std::cout << "Telefono: " << getTelefono();
-	std::cout << "Tipo de seguro: " << getTipoSeguro();
+	std::cout << "-----------------------" << std::endl;
+	std::cout << "Nombre: " << getApellidosyNombre()<< std::endl;
+	std::cout << "Fecha nacimiento: " << getFechaNacimiento()<< std::endl;
+	std::cout << "Direccion: " << getDireccion()<< std::endl;
+	std::cout << "Telefono: " << getTelefono()<< std::endl;
+	std::cout << "Tipo de seguro: " << getTipoSeguro()<< std::endl;
 }

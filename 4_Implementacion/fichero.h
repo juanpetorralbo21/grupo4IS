@@ -28,7 +28,7 @@
 
 		public:
 
-			Fichero(string nPacientes="pacientes.txt", string nCitas="citas.txt", string nTratamientos="tratamientos.txt");
+			Fichero(string nPacientes="pacientes/pacientes.txt", string nCitas="citas/citas.txt", string nTratamientos="tratamientos.txt");
 
 			//Modificadores
 			inline void setNFPacientes(string nPacientes) {nombre_fichero_Pacientes_=nPacientes;}

@@ -1,0 +1,5 @@
+Antonio,Marin,16/08/96,villanueva,608600405,1
+Sheila,Denamiel,05/06/94,Belmez,609694320,2
+Carlos,Marin,04/04/02,cordoba,609483721,2
+Antonio,Marin,1234,villa,608601430,2
+Antonio,Marin,d,d,605403020,2
