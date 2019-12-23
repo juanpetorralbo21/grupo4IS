@@ -14,7 +14,7 @@ Paciente formularioRegistroPaciente();
 
 int main()
 {
-	int mP=-1, mPac, mDPac, mDTPac, mC, mCPac; //Variables auxliares para los menus
+	int mP=-1, mPac=-1, mDPac=-1, mDTPac=-1, mC=-1, mCPac=-1; //Variables auxliares para los menus
 	int i;
 	Fichero f; //Clase que contiene toda las acciones con los ficheros
 	list<Paciente> auxLP;
@@ -173,10 +173,7 @@ int main()
 			default:
 				opInc();
 		}
-
-	}
-
-	
+	}	
 
 	return 0;
 
