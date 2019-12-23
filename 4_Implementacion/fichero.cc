@@ -121,8 +121,8 @@ bool Fichero::insertarCita(Cita cita)
 	//Si la cita no se encuentra en el fichero
 	if(!buscarCitaNombre(cita.getNombre(), cita.getApellidos()))
 	{
-		ofstream fich("./"+getNFCitas());
-		fich << cita.getLineaFichero();
+		ofstream fich("./"+getNFCitas(),ofstream::app);
+		fich << cita.getLineaFichero() <<endl;
 		fich.close();
 		return true;
 	}
